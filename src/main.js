@@ -12,7 +12,15 @@ function handlerSubmit(event) {
   event.preventDefault();
   const query = event.target.elements['search-text'].value.trim();
   if (query === '') {
-    alert('Sorry, you need to fill searhh query');
+    iziToast.error({
+      message: 'Sorry, you need to fill searсh query',
+      position: 'topRight',
+      timeout: 5000,
+      progressBar: false,
+      close: false,
+      icon: '',
+      messageColor: 'white',
+    });
     return;
   }
   getImagesByQuery(query);
