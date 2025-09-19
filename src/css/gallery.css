@@ -36,6 +36,7 @@ input {
   border-radius: 4px;
   padding: 8px 16px 6px;
   margin-right: 8px;
+  background-color: transparent;
   background-image: radial-gradient(
     circle,
     rgba(132, 198, 227, 1) 35%,
@@ -80,7 +81,7 @@ button:focus {
   background-color: #33abd6;
 }
 
-.galler {
+.gallery {
   margin-top: 32px;
   display: flex;
   flex-direction: row;
