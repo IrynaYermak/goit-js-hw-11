@@ -5,7 +5,7 @@ import { createGallery, hideLoader, clearGallery } from './js/render-functions';
 export const form = document.querySelector('.form');
 
 form.addEventListener('submit', handlerSubmit);
-
+hideLoader();
 function handlerSubmit(event) {
   event.preventDefault();
   clearGallery();

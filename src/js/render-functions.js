@@ -1,7 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
 export const gallery = document.querySelector('.gallery');
 
-const loader = document.querySelector('.load');
+const loader = document.querySelector('.loader');
 const galleryView = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
