@@ -1,7 +1,13 @@
 import SimpleLightbox from 'simplelightbox';
-
 export const gallery = document.querySelector('.gallery');
+
 const loader = document.querySelector('.load');
+const galleryView = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionsDelay: 250,
+  captionPosition: 'bottom',
+});
 
 export function createGallery(images) {
   const markupGallery = images
@@ -42,6 +48,7 @@ export function createGallery(images) {
     .join('');
 
   gallery.innerHTML = markupGallery;
+  galleryView.refresh();
 }
 
 export function clearGallery() {

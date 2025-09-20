@@ -1,9 +1,11 @@
 import axios from 'axios';
+import { showLoader } from './render-function';
 
 const API_KEY = '52353296-7e1352dd89e2156c2e1f9fbb2';
 const BASE_URL = 'https://pixabay.com/api/';
 
 export function getImagesByQuery(query) {
+  showLoader();
   return axios
     .get(BASE_URL, {
       params: {
